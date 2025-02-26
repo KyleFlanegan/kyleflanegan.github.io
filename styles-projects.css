@@ -76,9 +76,30 @@
     margin-right: 8px;
 }
 
-/* Project Videos */
+/* LinkedIn Embeds Styling */
+.linkedin-embed {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    min-height: 270px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.linkedin-embed iframe,
+.linkedin-embed .linkedin-post {
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Project Videos Section */
 .project-videos {
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .project-videos h3 {
@@ -87,43 +108,39 @@
     font-size: 1.3rem;
 }
 
-.project-videos h4 {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
+/* Video Grid Layout - Modified for responsiveness */
 .video-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;  /* Default to single column on mobile */
     gap: 30px;
+    width: 100%;
 }
 
-@media (min-width: 768px) {
+/* Switch to two columns on wider screens */
+@media (min-width: 992px) {
     .video-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;  /* Two columns on desktop */
     }
 }
 
+/* Video Container */
 .video-container {
+    width: 100%;
     margin-bottom: 20px;
 }
 
-.video-frame {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Description text */
+.post-description {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #555;
 }
 
-.video-frame iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+/* Fix for LinkedIn embedded content */
+iframe[src*="linkedin.com"],
+.li-embed {
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 /* Other Projects Section */

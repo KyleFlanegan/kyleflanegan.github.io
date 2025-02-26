@@ -1,0 +1,130 @@
+/* Footer Styling */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+    border-radius: 15px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* Footer Intro Section */
+.footer-greeting {
+    font-size: 2.5rem;
+    color: #0e7c5b;
+    margin: 0;
+    font-weight: 700;
+}
+
+.footer-tagline {
+    font-size: 1.3rem;
+    color: #ff6b35;
+    margin: 0 0 20px;
+    font-weight: 600;
+}
+
+.footer-bio {
+    color: #444;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* Footer Contact Section */
+.footer-contact h3,
+.footer-social h3 {
+    color: #006080;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list i {
+    color: #006080;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-list a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: #006080;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.github {
+    background-color: #333;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9rem;
+}

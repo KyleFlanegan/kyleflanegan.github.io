@@ -1,0 +1,59 @@
+/* Certifications Page Styling */
+.certifications-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .certifications-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.certification-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eaeaea;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certification-title {
+    font-size: 1.3rem;
+    color: #006080;
+    margin-bottom: 8px;
+}
+
+.certification-issuer {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.cert-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #006080;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+    background-color: #004d66;
+}
+
+.cert-btn i {
+    margin-right: 8px;
+}

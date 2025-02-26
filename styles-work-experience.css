@@ -1,0 +1,77 @@
+/* Work Experience Styling */
+.experience-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.experience-header {
+    margin-bottom: 15px;
+}
+
+.experience-title {
+    font-size: 1.4rem;
+    color: #006080;
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience-period {
+    color: #666;
+    font-style: italic;
+}
+
+.experience-description ul {
+    padding-left: 20px;
+}
+
+.experience-description li {
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .video-container {
+        width: 100%;
+    }
+}
+
+
+/* Download button styling */
+.download-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #006080;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #004d66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-icon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}

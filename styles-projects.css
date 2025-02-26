@@ -136,14 +136,13 @@
 
 /* Other Projects Button Grid */
 .other-projects-container {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .project-button-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
-    padding-bottom: 20px;
 }
 
 @media (min-width: 600px) {

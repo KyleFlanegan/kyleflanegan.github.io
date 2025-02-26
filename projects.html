@@ -253,6 +253,50 @@
                 document.getElementById("certifications-nav").classList.add("active");
             }
         });
+        // Hamburger menu for mobile 
+        document.addEventListener("DOMContentLoaded", function() {
+            // Create mobile menu toggle button
+            const mainContent = document.querySelector('.main-content');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            // Create button element
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'mobile-menu-toggle';
+            toggleButton.innerHTML = '<i class="fas fa-bars"></i> Navigation Menu';
+            
+            // Insert button before nav menu
+            mainContent.insertBefore(toggleButton, navMenu);
+            
+            // Add click event listener
+            toggleButton.addEventListener('click', function() {
+                navMenu.classList.toggle('open');
+                
+                // Change button icon based on menu state
+                if (navMenu.classList.contains('open')) {
+                    toggleButton.innerHTML = '<i class="fas fa-times"></i> Close Menu';
+                } else {
+                    toggleButton.innerHTML = '<i class="fas fa-bars"></i> Navigation Menu';
+                }
+            });
+            
+            // Close menu when clicking a nav item on mobile
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    if (window.innerWidth < 768) {
+                        navMenu.classList.remove('open');
+                        toggleButton.innerHTML = '<i class="fas fa-bars"></i> Navigation Menu';
+                    }
+                });
+            });
+            
+            // Update menu visibility on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    navMenu.classList.remove('open');
+                }
+            });
+        });
     </script>
 </body>
 </html>

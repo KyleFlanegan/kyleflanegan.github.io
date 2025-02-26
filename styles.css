@@ -140,28 +140,17 @@ body {
     }
 }
 
-/* Make the nav-menu sticky */
-.nav-menu {
-    position: sticky;
-    top: 20px; /* Distance from top of viewport when sticky */
-    height: fit-content; /* Only take up as much height as needed */
-    align-self: flex-start; /* Aligns to the top of the container */
-    width: 250px;
-    flex-shrink: 0;
-    margin-bottom: 0;
-}
+/* Fixed Navigation Styling - Modified for better mobile experience */
 
-@media (min-width: 768px) {
-    .nav-menu {
-        width: 250px;
-        flex-shrink: 0;
-        margin-bottom: 0;
-    }
+/* Base styles for all screen sizes */
+.nav-menu {
+    margin-bottom: 30px;
+    background-color: #f8f8f8;
 }
 
 .nav-item {
     padding: 15px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -181,6 +170,69 @@ body {
     font-weight: 500;
     font-size: 1.1rem;
     display: block;
+}
+
+/* Mobile Styles (default) */
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hamburger menu for mobile */
+.mobile-menu-toggle {
+    display: block;
+    background: #006080;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+}
+
+.mobile-menu-toggle i {
+    margin-right: 10px;
+}
+
+/* Hide the nav menu by default on mobile */
+.nav-menu {
+    display: none;
+    width: 100%;
+}
+
+/* When nav is toggled open on mobile */
+.nav-menu.open {
+    display: block;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        gap: 30px;
+    }
+    
+    /* Hide mobile menu toggle on desktop */
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    /* Always show nav menu on desktop */
+    .nav-menu {
+        display: block;
+        position: sticky;
+        top: 20px;
+        height: fit-content;
+        align-self: flex-start;
+        width: 250px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        overflow-y: auto;
+        max-height: calc(100vh - 40px); /* Prevent menu from being too tall */
+    }
 }
 
 /* Content Container - On Right Side */

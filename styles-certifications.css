@@ -42,7 +42,7 @@
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #006080;
+    background-color: #eeb94f;
     color: white;
     border-radius: 6px;
     text-decoration: none;
@@ -51,7 +51,7 @@
 }
 
 .cert-btn:hover {
-    background-color: #004d66;
+    background-color: #be9542;
 }
 
 .cert-btn i {

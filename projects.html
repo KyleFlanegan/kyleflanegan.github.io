@@ -20,7 +20,7 @@
             </div>
             <div class="hero-content">
                 <h1 class="name">Kyle Flanegan</h1>
-                <h2 class="title">BEng Mechatronics</h2>
+                <h2 class="title">Mechatronics Engineer (BEng)</h2>
                 <div class="buttons">
                     <a href="Documents/Kyle Flanegan CV.pdf" class="btn btn-primary" download >Download CV</a>
                     <a href="contact.html" class="btn btn-secondary">Contact</a>
@@ -36,7 +36,7 @@
                     <a href="index.html" class="nav-link">Home</a>
                 </div>
                 <div class="nav-item" id="work-nav">
-                    <a href="work-experience.html" class="nav-link">Work Experience</a>
+                    <a href="experience.html" class="nav-link">Work Experience</a>
                 </div>
                 <div class="nav-item" id="education-nav">
                     <a href="education.html" class="nav-link">Education</a>
@@ -49,10 +49,10 @@
                 </div>
             </nav>
 
-            <!-- Content Container (Different on each page) -->
             <!-- Content Container -->
             <div class="content-container">
-                <!-- Featured Project Section -->
+                
+                <!-- Mechatronics FYP Section -->
                 <section class="content-section">
                     <h2 class="section-title">Mechatronics Final Year Project</h2>
                     
@@ -117,6 +117,120 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- IoT Project Section -->
+                <section class="content-section">
+                    <h2 class="section-title">IoT Remote Water Monitoring System</h2>
+                    
+                    <div class="featured-project">
+                        <div class="project-description">
+                            <p>Proposed solution for a remote water tank monitoring and pump control system for a farm, 
+                                implementing wireless communication using LoRa.</p>
+                            <p>Components: LoRa Communication, Arduino Nano, ESP32, Solar Power, SSR's, Ultrasonic Sensors</p>
+                            
+                            <h3>Key Accomplishments:</h3>
+                            <ul>
+                                <li>Researching and specifying LoRa wireless technology to enablereliablelong-range communication between water tank and pumpcontrolsystems.</li>
+                                <li>Designing a dual-microcontroller architecture utilizing ESP32 andArduinoplatforms for optimal efficiency.</li>
+                                <li>Developing a responsive web interface for real-time water levelmonitoring and control of borehole pump using Solid-State Relays</li>
+                                <li>Creating specifications for solar power implementation withbatterybackup for the remote sensor station.</li>
+                                <li>Planning integration of industrial automation components includingSSR'sand breakers for circuit protection.</li>
+                                <li>Designing for weatherproof operation in variable climate conditions</li>
+                            </ul>
+                            <p>Outcomes: Delivered a proposed solution with recommended components, detailed explanations and a cost breakdown.</p>
+                            
+                            <div class="project-skills">
+                                <h3>Skills Applied:</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Extensive Research</span>
+                                    <span class="skill-tag">LoRa Communication</span>
+                                    <span class="skill-tag">Electrical Engineering</span>
+                                    <span class="skill-tag">Documentation</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <a href="Documents/IoT Water System.pdf" class="view-btn" target="_blank">
+                                    <i class="fas fa-file-pdf"></i> View Full Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-images">
+                    <h3>Project Gallery</h3>
+                    
+                    <div class="image-grid">
+                        <!-- First project image -->
+                        <div class="image-container">
+                            <img src="Images/IoT LinkedIn Cover.png" alt="IoT Remote Water Monitoring System" class="project-image" onclick="openModal(this)">
+                            <div class="image-caption">
+                                <h4>IoT Remote Water Monitoring System</h4>
+                                <p>Featuring LoRa communication and solar powered ultrasonic sensor station.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Second project image -->
+                        <div class="image-container">
+                            <img src="Images/IoT Mock.png" alt="Mobile User Interface Mockup" class="project-image" onclick="openModal(this)">
+                            <div class="image-caption">
+                                <h4>Mobile User Interface Mockup</h4>
+                                <p>Figma mockup for the mobile interface with pump control switch, tank water level, system warnings, and water level history.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Third project image -->
+                        <div class="image-container">
+                            <img src="Images/IoT Components.png" alt="Components Overview" class="project-image" onclick="openModal(this)">
+                            <div class="image-caption">
+                                <h4>Components Overview</h4>
+                                <p>Overview of the required components for the system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="imageModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img id="modalImage" src="" alt="">
+                        <div id="modalCaption"></div>
+                    </div>
+                </div>
+
+                <script>
+                    function openModal(img) {
+                        const modal = document.getElementById('imageModal');
+                        const modalImg = document.getElementById('modalImage');
+                        const modalCaption = document.getElementById('modalCaption');
+                        
+                        modal.style.display = 'block';
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt;
+                        modalCaption.textContent = img.alt;
+                    }
+
+                    function closeModal() {
+                        const modal = document.getElementById('imageModal');
+                        modal.style.display = 'none';
+                    }
+
+                    // Close modal when clicking outside the image
+                    document.getElementById('imageModal').addEventListener('click', function(e) {
+                        if (e.target === this) {
+                            closeModal();
+                        }
+                    });
+
+                    // Close modal with Escape key
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape') {
+                            closeModal();
+                        }
+                    });
+                </script>
+
+                </section>
                 
                 <!-- Other Projects Section -->
                 <section class="content-section">
@@ -127,7 +241,7 @@
                     </div>
 
                     <div class="project-videos">
-                        <h3>Graduate Attributes</h3>
+                        <h3>Graduate Attributes (High Credibility)</h3>
                     </div>
                     
                     <div class="other-projects-container">
